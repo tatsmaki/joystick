@@ -1,0 +1,41 @@
+{
+  "name": "joystick-ui",
+  "version": "1.0.9",
+  "type": "module",
+  "main": "./dist/main.umd.cjs",
+  "module": "./dist/main.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/main.js",
+      "require": "./dist/main.umd.cjs"
+    },
+    "./dist/main.css": {
+      "import": "./dist/main.css",
+      "require": "./dist/main.css"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {
+    "typescript": "~5.7.2",
+    "vite": "^6.0.11",
+    "vite-plugin-dts": "^4.5.0",
+    "vite-plugin-dts-bundle-generator": "^2.0.7"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build"
+  },
+  "author": "thorn_pear",
+  "license": "ISC",
+  "description": "Joystick UI and controls",
+  "keywords": [
+    "joystick",
+    "ui",
+    "controls",
+    "mobile"
+  ]
+}
