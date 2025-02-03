@@ -2,7 +2,7 @@
 
 Joystick UI component and controls for mobile browsers. Demo available:
 
-[<img width="423" alt="Screenshot 2025-02-03 at 01 29 35" src="https://github.com/user-attachments/assets/99301cf9-9ae0-46d8-bcc5-b3699e4d92a0" />](https://tatsmaki.github.io/joystick/demo/)
+[<img width="423" alt="Screenshot 2025-02-03 at 01 29 35" src="https://github.com/user-attachments/assets/99301cf9-9ae0-46d8-bcc5-b3699e4d92a0" />](https://tatsmaki.github.io/joystick/demo/){:target="\_blank"}
 
 ## Usage
 
