@@ -4,15 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joystick UI</title>
-    <link rel="stylesheet" href="https://unpkg.com/joystick-ui@1.0.10/dist/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/joystick-ui@1.0.12/dist/main.css" />
   </head>
   <body>
-    <script defer src="https://unpkg.com/joystick-ui@1.0.10"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const { joystick, joystickControl } = createJoystick();
-        document.body.append(joystick);
-      });
+    <script type="module">
+      import { createJoystick } from "https://unpkg.com/joystick-ui@1.0.12/dist/main.js?module";
+
+      const { joystick, joystickControl } = createJoystick();
+
+      document.body.append(joystick);
+
+      const text = document.createElement("span");
+
+      document.body.append(text);
+
+      const animate = () => {
+        const direction = joystickControl.direction;
+        const normalized = joystickControl.direction.normalize();
+        text.innerHTML = `
+           x: ${direction.x.toFixed(2)}, y: ${direction.y.toFixed(2)}
+           <br>
+           normalized: x: ${normalized.x.toFixed(2)}, y: ${normalized.y.toFixed(2)}
+        `;
+        requestAnimationFrame(animate);
+      };
+
+      animate();
     </script>
   </body>
 </html>
