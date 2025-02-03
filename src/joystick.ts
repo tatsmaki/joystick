@@ -55,15 +55,15 @@ const Joystick = (props: JoystickProps) => {
     thumb.style.transition = "transform 0.1s";
   };
 
-  const onTouchStart = (event: TouchEvent) => {
-    const [touch] = event.touches;
+  const onPointerDown = (event: PointerEvent) => {
+    // const [touch] = event.touches;
     const rect = thumb.getBoundingClientRect();
 
     thumbRadius = rect.width / 2;
     joystickRadius = joystick.clientWidth / 2;
 
     start.set(rect.x + thumbRadius, rect.y + thumbRadius);
-    end.set(touch.clientX, touch.clientY);
+    end.set(event.clientX, event.clientY);
     moveThumb();
 
     document.addEventListener("pointermove", onPointerMove);
@@ -71,7 +71,7 @@ const Joystick = (props: JoystickProps) => {
     thumb.style.transition = "none";
   };
 
-  joystick.ontouchstart = onTouchStart;
+  joystick.onpointerdown = onPointerDown;
 
   return joystick;
 };
