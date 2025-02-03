@@ -1,6 +1,6 @@
 {
   "name": "joystick-ui",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "type": "module",
   "main": "./dist/main.umd.cjs",
   "module": "./dist/main.js",
@@ -22,8 +22,7 @@
   "devDependencies": {
     "typescript": "~5.7.2",
     "vite": "^6.0.11",
-    "vite-plugin-dts": "^4.5.0",
-    "vite-plugin-dts-bundle-generator": "^2.0.7"
+    "vite-plugin-dts": "^4.5.0"
   },
   "scripts": {
     "start": "vite",
