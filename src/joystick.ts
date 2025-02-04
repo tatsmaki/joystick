@@ -56,7 +56,8 @@ const Joystick = (props: JoystickProps) => {
   };
 
   const onPointerDown = (event: PointerEvent) => {
-    // const [touch] = event.touches;
+    event.stopImmediatePropagation();
+
     const rect = thumb.getBoundingClientRect();
 
     thumbRadius = rect.width / 2;
