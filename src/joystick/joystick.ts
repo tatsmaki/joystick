@@ -1,7 +1,7 @@
 import classes from "./joystick.module.css";
 import { JoystickControl } from "./joystick.control";
 import { CreateJoystickArg, JoystickProps } from "./joystick.types";
-import { Vector2 } from "./vector2";
+import { Vector2 } from "../vector2";
 
 const Joystick = (props: JoystickProps) => {
   const { joystickControl, joystickClass, thumbClass } = props;
@@ -40,18 +40,21 @@ const Joystick = (props: JoystickProps) => {
   };
 
   const onPointerMove = (event: PointerEvent) => {
+    event.stopImmediatePropagation();
     end.set(event.clientX, event.clientY);
 
     moveThumb();
   };
 
-  const onPointerUp = () => {
+  const onPointerUp = (event: PointerEvent) => {
+    event.stopImmediatePropagation();
     start.set(0, 0);
     end.set(0, 0);
     moveThumb();
 
-    document.removeEventListener("pointermove", onPointerMove);
-    document.removeEventListener("pointerup", onPointerUp);
+    joystick.removeEventListener("pointermove", onPointerMove);
+    joystick.removeEventListener("pointerup", onPointerUp);
+    joystick.removeEventListener("pointerleave", onPointerUp);
     thumb.style.transition = "transform 0.1s";
   };
 
@@ -67,8 +70,9 @@ const Joystick = (props: JoystickProps) => {
     end.set(event.clientX, event.clientY);
     moveThumb();
 
-    document.addEventListener("pointermove", onPointerMove);
-    document.addEventListener("pointerup", onPointerUp);
+    joystick.addEventListener("pointermove", onPointerMove);
+    joystick.addEventListener("pointerup", onPointerUp);
+    joystick.addEventListener("pointerleave", onPointerUp);
     thumb.style.transition = "none";
   };
 

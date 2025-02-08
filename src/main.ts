@@ -1,1 +1,1 @@
-export { createJoystick } from "./joystick";
+export { createJoystick } from "./joystick/joystick";

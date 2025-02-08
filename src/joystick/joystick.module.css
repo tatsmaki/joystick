@@ -13,6 +13,17 @@
   touch-action: none;
 }
 
+.joystick::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180%;
+  height: 180%;
+  border-radius: inherit;
+  transform: translate(-50%, -50%);
+}
+
 .thumb {
   --dx: 0px;
   --dy: 0px;
