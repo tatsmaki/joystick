@@ -5,5 +5,5 @@
     "declarationDir": "dist"
   },
   "include": ["src"],
-  "exclude": ["src/development.ts"]
+  "exclude": ["src/development.ts", "src/development.css"]
 }

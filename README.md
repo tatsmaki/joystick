@@ -15,17 +15,17 @@ const { joystick, joystickControl } = createJoystick();
 
 ## Available props
 
-| Prop               | Type    | Description                                                                                   |
-| ------------------ | ------- | --------------------------------------------------------------------------------------------- |
-| `joystickClass`    | string  | Customize joystick styles. Default `min-width: 180px`, `width: 20vw` and `aspect-ratio: 1/1`. |
-| `thumbClass`       | string  | Customize moving thumb styles. Default `width: 36px` and `height: 36px`.                      |
-| `enableTransition` | boolean | TODO. Transition is enabled by default.                                                       |
+| Prop               | Type    | Description                                                              |
+| ------------------ | ------- | ------------------------------------------------------------------------ |
+| `joystickClass`    | string  | Customize joystick styles. Default `min-width: 180px` and `width: 20vw`. |
+| `thumbClass`       | string  | Customize moving thumb styles. Default `width: 36px` and `height: 36px`. |
+| `enableTransition` | boolean | TODO. Transition is enabled by default.                                  |
 
 ## WebGL
 
 ```ts
 const animate = () => {
-  console.log(joystickControl.direction); // or joystickControl.direction.normalize()
+  console.log(joystickControl.direction.normalize());
   requestAnimationFrame(animate);
 };
 
@@ -33,6 +33,8 @@ animate();
 ```
 
 ## Browser
+
+`joystick` is a DOM element which can be rendered by any library or framework.
 
 ```ts
 document.append(joystick);

@@ -1,6 +1,10 @@
 import { createJoystick } from "./main";
+import "./development.css";
 
-const { joystick, joystickControl } = createJoystick();
+const { joystick, joystickControl } = createJoystick({
+  joystickClass: "joystick",
+  thumbClass: "thumb",
+});
 
 document.body.append(joystick);
 
