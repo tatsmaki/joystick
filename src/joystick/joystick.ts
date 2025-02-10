@@ -11,6 +11,11 @@ const Joystick = (props: JoystickProps) => {
 
   joystick.classList.add(classes.joystick);
   joystickClass && joystick.classList.add(joystickClass);
+  joystick.role = "command";
+  joystick.ariaLabel = "Joystick";
+  joystick.tabIndex = 0;
+  joystick.ariaPressed = "false";
+
   thumb.classList.add(classes.thumb);
   thumbClass && thumb.classList.add(thumbClass);
   joystick.append(thumb);
@@ -55,6 +60,7 @@ const Joystick = (props: JoystickProps) => {
     joystick.removeEventListener("pointermove", onPointerMove);
     joystick.removeEventListener("pointerup", onPointerUp);
     joystick.removeEventListener("pointerleave", onPointerUp);
+    joystick.ariaPressed = "false";
     thumb.style.transition = "transform 0.1s";
   };
 
@@ -73,6 +79,7 @@ const Joystick = (props: JoystickProps) => {
     joystick.addEventListener("pointermove", onPointerMove);
     joystick.addEventListener("pointerup", onPointerUp);
     joystick.addEventListener("pointerleave", onPointerUp);
+    joystick.ariaPressed = "true";
     thumb.style.transition = "none";
   };
 
