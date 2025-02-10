@@ -13,7 +13,7 @@ import "joystick-ui/dist/main.css";
 const { joystick, joystickControl } = createJoystick();
 ```
 
-## Available props
+## Customization
 
 | Prop               | Type    | Description                                                              |
 | ------------------ | ------- | ------------------------------------------------------------------------ |
@@ -37,7 +37,7 @@ animate();
 `joystick` is a DOM element which can be rendered by any library or framework.
 
 ```ts
-document.append(joystick);
+document.body.append(joystick);
 ```
 
 ## React
