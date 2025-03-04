@@ -1,0 +1,30 @@
+.arrow {
+  width: 200px;
+  height: 3px;
+  --arrow-color: #cb3837;
+  background: var(--arrow-color);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 3px;
+  background: inherit;
+}
+
+.arrow::before {
+  transform: rotate(45deg);
+  transform-origin: right;
+}
+
+.arrow::after {
+  transform: rotate(-45deg);
+  transform-origin: right;
+}

@@ -1,0 +1,10 @@
+.joystick::after {
+  /* border: 5px solid red; */
+}
+
+.text {
+  display: block;
+  background-color: white;
+  z-index: 2;
+  padding: 16px;
+}

@@ -1,0 +1,14 @@
+.player {
+  width: 200px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  --x: 0px;
+  --y: 0px;
+  transform: translate(calc(50vw + var(--x) - 50%), calc(50vh + var(--y) - 50%));
+
+  border: 1px solid #000000;
+}

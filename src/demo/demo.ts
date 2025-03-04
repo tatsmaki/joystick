@@ -1,12 +1,14 @@
-import { createJoystick } from "./main";
-import "./development.css";
+import { createJoystick } from "../main";
+import { arrow, renderArrow } from "./arrow";
+import "./demo.css";
+import { player, renderPlayer } from "./player";
 
 const { joystick, joystickControl } = createJoystick({
   joystickClass: "joystick",
   thumbClass: "thumb",
 });
 
-document.body.append(joystick);
+document.body.append(joystick, player);
 
 /**
  * Check for document events
@@ -21,12 +23,17 @@ document.onpointermove = () => {
  */
 const text = document.createElement("span");
 
-document.body.append(text);
+text.className = "text";
+
+player.append(text, arrow);
 
 const animate = () => {
   const direction = joystickControl.direction.normalize();
 
   text.innerHTML = `x: ${direction.x.toFixed(2)}, y: ${direction.y.toFixed(2)}`;
+
+  renderPlayer(direction);
+  renderArrow(direction);
 
   requestAnimationFrame(animate);
 };

@@ -14,8 +14,4 @@ export default defineConfig({
       fileName: "main",
     },
   },
-  server: {
-    port: 3000,
-    open: true,
-  },
 });
