@@ -4,7 +4,7 @@ Joystick UI component and controls for mobile browsers. Demo available:
 
 https://joystick-demo.vercel.app/
 
-[<img alt="Joystick demo" src="https://github.com/user-attachments/assets/95d50199-4dfb-42f8-9c05-92c078ba389a" />]([https://joystick-demo.vercel.app/])
+[<img alt="Joystick demo" src="https://github.com/user-attachments/assets/83b179e9-8688-47b5-bc32-e2a9ca1b8909" />]([https://joystick-demo.vercel.app/])
 
 ## Usage
 
