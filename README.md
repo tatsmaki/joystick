@@ -2,7 +2,9 @@
 
 Joystick UI component and controls for mobile browsers. Demo available:
 
-[<img width="499" alt="Screenshot 2025-02-03 at 01 48 35" src="https://github.com/user-attachments/assets/bb330685-6dcf-4ff1-84ba-661149826142" />](https://tatsmaki.github.io/joystick/demo/)
+https://joystick-demo.vercel.app/
+
+[<img alt="Joystick demo" src="https://github.com/user-attachments/assets/95d50199-4dfb-42f8-9c05-92c078ba389a" />]([https://joystick-demo.vercel.app/])
 
 ## Usage
 
